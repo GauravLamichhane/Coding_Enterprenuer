@@ -8,11 +8,12 @@ article_search_view,
 article_create_view,
 article_detail_view
 )
-from accounts.views import login_view,logout_view
+from accounts.views import login_view,logout_view,register_view
 urlpatterns = [
     path("",home_view),
-    path("login/",login_view),
+    path("login/",login_view,name = "login"),
     path("logout/",logout_view),
+    path("register/",register_view),
     path("articles/",article_search_view),
     path("articles/create/",article_create_view),
     path("articles/<int:id>/",article_detail_view),

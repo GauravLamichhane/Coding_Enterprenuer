@@ -4,13 +4,13 @@
 
 
 {% if not created%}
+
+
 <div style="margin-top: 30px;">
 <form action="." method="post">
   {%csrf_token%}
-  <br>
-  <input type="text" name="title" placeholder="Title"><br>
-  <br><textarea name="content" id="" placeholder="content"></textarea>
-  <input type="submit" value="Create Article">
+  {{form.as_p}}
+  <button style="margin-top: 10px;" type="submit">Create article</button>
 </form>
 </div>
 
