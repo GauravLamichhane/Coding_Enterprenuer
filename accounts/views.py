@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate,login, logout
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
+import pretty_errors
+
 def register_view(request):
   form = UserCreationForm(request.POST or None)
   if form.is_valid():
